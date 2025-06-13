@@ -13,6 +13,8 @@ mongoose.connect("mongodb+srv://jeevavenkatesan:123@cluster0.erhfphu.mongodb.net
     useNewUrlParser: true,
     useUnifiedTopology: true,
     ssl: true, // this enables TLS
+    tls: true,
+    tlsInsecure: false
 });
 
 const Message = require("./model/User");
