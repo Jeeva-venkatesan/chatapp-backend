@@ -9,7 +9,11 @@ const server = http.createServer(app);
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect("mongodb+srv://jeevavenkatesan:123@cluster0.erhfphu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
+mongoose.connect("mongodb+srv://jeevavenkatesan:123@cluster0.erhfphu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    ssl: true, // this enables TLS
+});
 
 const Message = require("./model/User");
 const User = require("./model/User");
