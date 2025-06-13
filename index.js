@@ -11,8 +11,8 @@ app.use(express.json());
 
 mongoose.connect("mongodb+srv://jeevavenkatesan:123@cluster0.erhfphu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
 
-const Message = require("./models/Message");
-const User = require("./models/User");
+const Message = require("./model/User");
+const User = require("./model/User");
 
 const io = new Server(server, {
     cors: {
